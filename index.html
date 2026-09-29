@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>海棠香国 | HAI TANG XIANG GUO — The Art of Medicinal Fragrance</title>
+<meta name="description" content="海棠香国 — Traditional Chinese Medicinal Fragrance. Editorial luxury fragrance house rooted in Chinese medicine and heritage craft." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@200;300;400;500;600&family=Ma+Shan+Zheng&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   海棠香国 — HAI TANG XIANG GUO
+   Mobile Friendly + Language Selector + Full Image Products
+   ============================================================ */
+
+:root {
+  --red: #8B1E2D;
+  --red-dark: #6B1420;
+  --red-light: #A83244;
+  --gold: #C9A961;
+  --gold-light: #D9BC7E;
+  --gold-soft: #E8D9B0;
+  --cream: #F5EFE6;
+  --cream-2: #EFE7DA;
+  --beige: #E8DCC8;
+  --ink: #3E2C23;
+  --ink-soft: #5A4438;
+  --wood: #6B5444;
+  --white: #FFFFFF;
+
+  --font-serif-cn: 'Noto Serif SC', serif;
+  --font-calligraphy: 'Ma Shan Zheng', cursive;
+  --font-serif-en: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-slow: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 16px;
+  overflow-x: hidden;
+  font-weight: 300;
+}
+img { max-width: 100%; display: block; height: auto; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { max-width: 1440px; margin: 0 auto; padding: 0 48px; }
+.container-wide { max-width: 1680px; margin: 0 auto; padding: 0 72px; }
+
+/* ============================================================
+   LANGUAGE SELECTOR OVERLAY — Shows on first visit
+   ============================================================ */
+.lang-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #3E2C23 0%, #6B1420 50%, #8B1E2D 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 1;
+  transition: opacity 0.8s var(--ease), visibility 0.8s var(--ease);
+  overflow: hidden;
+}
+.lang-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.lang-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M10 40 Q20 25 35 30 Q45 15 60 25 Q75 15 85 30 Q100 25 110 40' fill='none' stroke='%23C9A961' stroke-width='1' opacity='0.15'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 60px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.lang-overlay-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+.lang-overlay-logo {
+  width: 90px; height: 90px;
+  margin: 0 auto 28px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif-cn);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--red);
+  border: 3px solid var(--gold);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: fadeInScale 1s var(--ease) 0.1s both;
+}
+.lang-overlay-logo::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(201, 169, 97, 0.5);
+  border-radius: 50%;
+}
+.lang-overlay-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.3em;
+  margin-bottom: 14px;
+  animation: fadeIn 1s var(--ease) 0.3s both;
+}
+.lang-overlay-subtitle {
+  font-family: var(--font-serif-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.5em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  animation: fadeIn 1s var(--ease) 0.5s both;
+}
+.lang-overlay-question {
+  font-family: var(--font-serif-cn);
+  font-size: 1rem;
+  color: rgba(245, 239, 230, 0.7);
+  margin-bottom: 32px;
+  letter-spacing: 0.2em;
+  animation: fadeIn 1s var(--ease) 0.6s both;
+}
+.lang-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  animation: fadeIn 1s var(--ease) 0.8s both;
+}
+.lang-option {
+  padding: 32px 20px;
+  background: rgba(245, 239, 230, 0.08);
+  border: 2px solid rgba(201, 169, 97, 0.4);
+  border-radius: 8px;
+  color: var(--cream);
+  transition: all 0.5s var(--ease);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.lang-option::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease);
+}
+.lang-option:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.lang-option:hover::before { opacity: 0.15; }
+.lang-option-content { position: relative; z-index: 1; }
+.lang-option-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+  display: block;
+}
+.lang-option-en {
+  font-family: var(--font-serif-en);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--gold-light);
+  letter-spacing: 0.1em;
+  display: block;
+}
+.lang-option:hover .lang-option-cn { color: var(--gold-light); }
+
+.lang-overlay-footer {
+  margin-top: 60px;
+  font-family: var(--font-serif-en);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: rgba(245, 239, 230, 0.4);
+  text-transform: uppercase;
+  animation: fadeIn 1s var(--ease) 1s both;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInScale { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 22px 0;
+  transition: all 0.7s var(--ease);
+}
+.header.transparent { background: transparent; }
+.header.solid {
+  background: rgba(245, 239, 230, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 14px 0;
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 4px 24px rgba(62, 44, 35, 0.08);
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  gap: 40px;
+}
+.logo { display: flex; align-items: center; gap: 14px; }
+.logo-mark {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif-cn);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  box-shadow: 0 6px 18px rgba(139, 30, 45, 0.3);
+  position: relative;
+  flex-shrink: 0;
+}
+.logo-mark::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1px solid rgba(201, 169, 97, 0.5);
+  border-radius: 50%;
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--cream);
+  transition: color 0.7s var(--ease);
+}
+.logo-en {
+  font-size: 0.55rem;
+  letter-spacing: 0.5em;
+  color: rgba(245, 239, 230, 0.6);
+  margin-top: 4px;
+  transition: color 0.7s var(--ease);
+}
+.header.solid .logo-cn { color: var(--red); }
+.header.solid .logo-en { color: var(--gold); }
+
+.nav { display: flex; gap: 36px; align-items: center; }
+.nav a {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: rgba(245, 239, 230, 0.9);
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.5s var(--ease);
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.5s var(--ease);
+}
+.nav a:hover::after { width: 100%; }
+.nav a:hover { color: var(--gold-light); }
+.header.solid .nav a { color: var(--ink); }
+.header.solid .nav a:hover { color: var(--red); }
+
+.header-tools { display: flex; gap: 22px; align-items: center; }
+.tool-link {
+  font-family: var(--font-serif-cn);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: rgba(245, 239, 230, 0.85);
+  transition: color 0.5s var(--ease);
+}
+.tool-link:hover { color: var(--gold-light); }
+.header.solid .tool-link { color: var(--ink); }
+.header.solid .tool-link:hover { color: var(--red); }
+
+.lang-toggle {
+  padding: 8px 18px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--cream);
+  transition: all 0.5s var(--ease);
+  background: transparent;
+  font-weight: 500;
+}
+.lang-toggle:hover { background: var(--gold); color: var(--red-dark); }
+.header.solid .lang-toggle { color: var(--red); }
+.header.solid .lang-toggle:hover { background: var(--red); color: var(--cream); }
+
+.menu-toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+.menu-toggle span { width: 22px; height: 2px; background: var(--cream); transition: all 0.5s var(--ease); }
+.header.solid .menu-toggle span { background: var(--red); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--ink);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/p1.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4) saturate(0.75);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(139, 30, 45, 0.5) 0%, transparent 55%),
+    radial-gradient(circle at 85% 70%, rgba(62, 44, 35, 0.9) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(62, 44, 35, 0.4), rgba(62, 44, 35, 0.95));
+}
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 20 L80 50 L50 80 L20 50 Z' fill='none' stroke='%23C9A961' stroke-width='0.5'/%3E%3C/svg%3E");
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 160px 72px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  min-height: 100vh;
+}
+.hero-left { color: var(--cream); }
+.hero-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 26px;
+  background: rgba(139, 30, 45, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--gold-light);
+  margin-bottom: 40px;
+  animation: fadeIn 1.2s var(--ease) 0.2s both;
+}
+.hero-badge-top::before { content: '❖'; color: var(--gold); }
+
+.hero-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--font-serif-cn);
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  color: var(--cream);
+  line-height: 1;
+  height: 480px;
+  margin-bottom: 40px;
+  animation: fadeIn 1.4s var(--ease) 0.3s both;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+.hero-en-title {
+  font-family: var(--font-serif-en);
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: var(--gold-light);
+  line-height: 1.15;
+  margin-bottom: 28px;
+  animation: fadeIn 1.2s var(--ease) 0.8s both;
+}
+.hero-en-title span { display: block; }
+.hero-en-title .uppercase {
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.5em;
+  color: rgba(245, 239, 230, 0.6);
+  margin-top: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.hero-quote {
+  font-family: var(--font-serif-cn);
+  font-size: 1rem;
+  color: rgba(245, 239, 230, 0.75);
+  line-height: 2;
+  max-width: 400px;
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+  margin-bottom: 44px;
+  animation: fadeIn 1.2s var(--ease) 1.2s both;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 36px;
+  background: var(--red);
+  color: var(--cream);
+  font-family: var(--font-serif-cn);
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  transition: all 0.5s var(--ease);
+  animation: fadeIn 1.2s var(--ease) 1.5s both;
+  box-shadow: 0 12px 30px rgba(139, 30, 45, 0.4);
+}
+.hero-cta:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(139, 30, 45, 0.5);
+  gap: 24px;
+}
+.hero-cta .arrow { font-family: var(--font-serif-en); font-size: 1.2rem; }
+
+.hero-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-art {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  aspect-ratio: 4/5;
+  animation: fadeInScale 1.6s var(--ease) 0.6s both;
+}
+.hero-art-frame {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--gold);
+  padding: 20px;
+  border-radius: 4px;
+}
+.hero-art-frame::before,
+.hero-art-frame::after {
+  content: '';
+  position: absolute;
+  width: 40px; height: 40px;
+  border: 2px solid var(--gold);
+}
+.hero-art-frame::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+.hero-art-frame::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+.hero-art-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92) saturate(0.9);
+  border-radius: 2px;
+}
+.hero-art-seal {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 90px; height: 90px;
+  background: var(--red);
+  color: var(--cream);
+  font-family: var(--font-calligraphy);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  padding: 12px;
+  border-radius: 3px;
+  z-index: 3;
+  animation: fadeIn 1.2s var(--ease) 1.8s both;
+  box-shadow: 0 12px 30px rgba(139, 30, 45, 0.5);
+  border: 2px solid var(--gold);
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 72px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--gold);
+  font-family: var(--font-serif-cn);
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  animation: fadeIn 1.2s var(--ease) 2s both;
+}
+.scroll-line {
+  width: 70px;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--gold-light);
+  animation: scrollMove 3s ease-in-out infinite;
+}
+@keyframes scrollMove { 0% { left: -100%; } 50% { left: 100%; } 100% { left: 100%; } }
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+.intro {
+  background: var(--cream);
+  padding: 160px 0;
+  position: relative;
+  overflow: hidden;
+}
+.intro::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M10 40 Q20 25 35 30 Q45 15 60 25 Q75 15 85 30 Q100 25 110 40' fill='none' stroke='%23C9A961' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 60px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.intro .container-wide {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.intro-bg-cn {
+  position: absolute;
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%);
+  font-family: var(--font-calligraphy);
+  font-size: clamp(20rem, 38vw, 42rem);
+  color: var(--red);
+  opacity: 0.05;
+  line-height: 0.9;
+  pointer-events: none;
+}
+.intro-content { position: relative; z-index: 2; padding-left: 60px; }
+.intro-label {
+  display: inline-block;
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--red);
+  margin-bottom: 28px;
+  padding: 8px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: rgba(201, 169, 97, 0.08);
+}
+.intro-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  color: var(--red);
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  margin-bottom: 36px;
+}
+.intro-title .en-line {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.5em;
+  color: var(--gold);
+  margin-top: 20px;
+}
+.intro-text {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 2.2;
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+.intro-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 2px solid var(--gold);
+  max-width: 640px;
+}
+.intro-pillar-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.intro-pillar-en {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ============================================================
+   PRODUCTS — FULL IMAGE STYLISH GRID
+   ============================================================ */
+.products {
+  background: var(--cream-2);
+  padding: 140px 0;
+  position: relative;
+}
+.products-head {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.products-head-label {
+  display: inline-block;
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--red);
+  margin-bottom: 24px;
+  padding: 8px 24px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: rgba(201, 169, 97, 0.08);
+}
+.products-head-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+.products-head-title .en {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.5em;
+  color: var(--gold);
+  margin-top: 16px;
+}
+.products-head-desc {
+  max-width: 600px;
+  margin: 24px auto 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 2;
+}
+
+/* Filter tabs */
+.product-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  padding: 0 24px;
+}
+.product-filter {
+  padding: 12px 28px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--red);
+  background: transparent;
+  transition: all 0.5s var(--ease);
+  font-weight: 500;
+}
+.product-filter:hover { background: rgba(201, 169, 97, 0.15); }
+.product-filter.active {
+  background: var(--red);
+  color: var(--cream);
+  border-color: var(--red);
+  box-shadow: 0 8px 20px rgba(139, 30, 45, 0.3);
+}
+
+/* ============ STYLISH PRODUCT GRID — FULL IMAGES ============ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 0 72px;
+}
+.product-card {
+  background: var(--cream);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.6s var(--ease);
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(62, 44, 35, 0.18);
+  border-color: var(--gold);
+}
+
+/* Full image container — no crop */
+.product-image-wrap {
+  position: relative;
+  width: 100%;
+  background: var(--cream-2);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  transition: transform 1.2s var(--ease-slow);
+  display: block;
+  border-radius: 4px;
+}
+.product-card:hover .product-image { transform: scale(1.03); }
+
+/* Seal badge */
+.product-seal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  background: var(--red);
+  color: var(--cream);
+  font-family: var(--font-calligraphy);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(139, 30, 45, 0.4);
+  border: 2px solid var(--gold);
+  writing-mode: vertical-rl;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  padding: 6px;
+}
+
+/* Product content */
+.product-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-top: 1px solid rgba(201, 169, 97, 0.3);
+}
+.product-category-tag {
+  display: inline-block;
+  font-family: var(--font-serif-cn);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.product-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--red);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.product-en {
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.product-desc {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.9;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201, 169, 97, 0.4);
+  font-family: var(--font-serif-cn);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-soft);
+}
+.product-discover {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--red);
+  font-weight: 600;
+  transition: all 0.5s var(--ease);
+}
+.product-card:hover .product-discover { gap: 14px; color: var(--red-dark); }
+.product-discover .arrow { font-family: var(--font-serif-en); font-size: 1rem; }
+
+/* ============================================================
+   HERITAGE
+   ============================================================ */
+.heritage {
+  background: var(--red);
+  padding: 180px 0;
+  position: relative;
+  overflow: hidden;
+  color: var(--cream);
+}
+.heritage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M10 40 Q20 25 35 30 Q45 15 60 25 Q75 15 85 30 Q100 25 110 40' fill='none' stroke='%23C9A961' stroke-width='1' opacity='0.2'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.heritage .container-wide { position: relative; z-index: 1; }
+.heritage-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 100px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.4);
+}
+.heritage-head-label {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--gold-light);
+  margin-bottom: 24px;
+}
+.heritage-head-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+}
+.heritage-head-desc {
+  font-size: 0.95rem;
+  color: rgba(245, 239, 230, 0.8);
+  line-height: 2.1;
+}
+.heritage-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+}
+.heritage-timeline::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 4%;
+  right: 4%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold), var(--gold), transparent);
+}
+.timeline-node { text-align: center; position: relative; }
+.timeline-dot {
+  width: 72px; height: 72px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif-cn);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--red);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 24px rgba(62, 44, 35, 0.3);
+}
+.timeline-year {
+  font-family: var(--font-serif-cn);
+  font-size: 1.6rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.timeline-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 1.05rem;
+  color: var(--cream);
+  letter-spacing: 0.15em;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.timeline-en {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(245, 239, 230, 0.55);
+}
+
+/* ============================================================
+   PANELS
+   ============================================================ */
+.panels { background: var(--cream); padding: 160px 0; }
+.panels-head { text-align: center; margin-bottom: 80px; }
+.panels-head-label {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--red);
+  margin-bottom: 24px;
+  padding: 8px 24px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  display: inline-block;
+  background: rgba(201, 169, 97, 0.08);
+}
+.panels-head-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.12em;
+}
+.panels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  height: 640px;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.panel {
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--gold);
+  cursor: pointer;
+  background: var(--ink);
+}
+.panel:last-child { border-right: none; }
+.panel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(0.5) saturate(0.85);
+  transition: var(--ease);
+}
+.panel:hover .panel-img { filter: brightness(0.7) saturate(0.95); transform: scale(1.06); }
+.panel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(62, 44, 35, 0.9) 0%, rgba(62, 44, 35, 0.3) 50%, rgba(62, 44, 35, 0.5) 100%);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--cream);
+}
+.panel-num {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  letter-spacing: 0.3em;
+  font-weight: 600;
+}
+.panel-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--cream);
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+.panel-en {
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+}
+.panel-desc {
+  font-size: 0.82rem;
+  color: rgba(245, 239, 230, 0.8);
+  line-height: 1.85;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: var(--ease);
+}
+.panel:hover .panel-desc { max-height: 200px; opacity: 1; margin-top: 14px; }
+
+/* ============================================================
+   FIND
+   ============================================================ */
+.find { background: var(--ink); padding: 180px 0; position: relative; overflow: hidden; }
+.find::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M10 40 Q20 25 35 30 Q45 15 60 25 Q75 15 85 30 Q100 25 110 40' fill='none' stroke='%23C9A961' stroke-width='1' opacity='0.15'/%3E%3C/svg%3E");
+  opacity: 0.6;
+}
+.find .container-wide { position: relative; z-index: 1; }
+.find-head { text-align: center; margin-bottom: 100px; }
+.find-head-label {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+.find-head-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.15em;
+  line-height: 1.1;
+}
+.find-head-title .en {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.4em;
+  color: var(--gold-light);
+  margin-top: 24px;
+}
+.find-words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.find-word {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: rgba(245, 239, 230, 0.35);
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: var(--ease);
+  padding: 10px 0;
+  line-height: 1;
+  position: relative;
+}
+.find-word::before {
+  content: '❖';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.5s var(--ease);
+}
+.find-word:hover { color: var(--gold-light); letter-spacing: 0.15em; }
+.find-word:hover::before { opacity: 1; }
+.find-word .en {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(201, 169, 97, 0.6);
+  margin-top: 16px;
+  transition: var(--ease);
+}
+.find-word:hover .en { color: var(--gold-light); }
+
+/* ============================================================
+   CRAFT
+   ============================================================ */
+.craft { background: var(--cream); padding: 180px 0; }
+.craft-head { text-align: center; margin-bottom: 100px; }
+.craft-head-label {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--red);
+  margin-bottom: 24px;
+  padding: 8px 24px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  display: inline-block;
+  background: rgba(201, 169, 97, 0.08);
+}
+.craft-head-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.12em;
+}
+.craft-head-title .en {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.5em;
+  color: var(--gold);
+  margin-top: 16px;
+}
+.craft-sequence {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  height: 420px;
+  overflow: hidden;
+}
+.craft-step {
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--gold);
+  cursor: pointer;
+}
+.craft-step:last-child { border-right: none; }
+.craft-step-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(0.6) saturate(0.8);
+  transition: var(--ease);
+}
+.craft-step:hover .craft-step-img { filter: brightness(0.8) saturate(1); transform: scale(1.05); }
+.craft-step-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(62, 44, 35, 0.9), rgba(62, 44, 35, 0.1) 60%, transparent);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--cream);
+}
+.craft-step-num {
+  font-family: var(--font-serif-cn);
+  font-size: 0.75rem;
+  color: var(--gold-light);
+  letter-spacing: 0.3em;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.craft-step-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 1.15rem;
+  letter-spacing: 0.15em;
+  color: var(--cream);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.craft-step-en {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(245, 239, 230, 0.65);
+}
+
+/* ============================================================
+   CULTURE
+   ============================================================ */
+.culture { background: var(--cream-2); padding: 180px 0; }
+.culture-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--gold);
+}
+.culture-head-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+}
+.culture-head-title .en {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.45em;
+  color: var(--gold);
+  margin-top: 12px;
+}
+.culture-head-meta {
+  font-family: var(--font-serif-cn);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  font-weight: 500;
+}
+.culture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
+.culture-item { cursor: pointer; transition: var(--ease); }
+.culture-item-num {
+  font-family: var(--font-serif-cn);
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.culture-item-img {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border-radius: 4px;
+  position: relative;
+}
+.culture-item-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.8s var(--ease-slow);
+}
+.culture-item:hover .culture-item-img img { transform: scale(1.05); }
+.culture-item-img::after {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.culture-item-cn {
+  font-family: var(--font-serif-cn);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+.culture-item-en {
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.culture-item-desc {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 2;
+  margin-bottom: 22px;
+}
+.culture-item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  color: var(--red);
+  font-weight: 500;
+  transition: var(--ease);
+}
+.culture-item:hover .culture-item-link { gap: 20px; color: var(--red-dark); }
+.culture-item-link .arrow { font-family: var(--font-serif-en); font-size: 1rem; transition: transform 0.5s var(--ease); }
+.culture-item:hover .culture-item-link .arrow { transform: translateX(6px); }
+
+/* ============================================================
+   BUSINESS
+   ============================================================ */
+.business { background: var(--cream); padding: 180px 0; position: relative; overflow: hidden; }
+.business::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect x='10' y='10' width='60' height='60' fill='none' stroke='%238B1E2D' stroke-width='0.5' opacity='0.06'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.business .container-wide { position: relative; z-index: 1; }
+.business-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+.business-label {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--red);
+  margin-bottom: 32px;
+  padding: 8px 24px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  display: inline-block;
+  background: rgba(201, 169, 97, 0.08);
+}
+.business-title {
+  font-family: var(--font-serif-cn);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  margin-bottom: 30px;
+}
+.business-title .en {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.5em;
+  color: var(--gold);
+  margin-top: 16px;
+}
+.business-desc {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 2.1;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+.business-list { list-style: none; margin-bottom: 44px; }
+.business-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-serif-cn);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  font-weight: 500;
+  transition: var(--ease);
+  cursor: pointer;
+}
+.business-list li:hover { padding-left: 8px; color: var(--red-dark); }
+.business-list li::after {
+  content: '→';
+  font-family: var(--font-serif-en);
+  font-size: 1.1rem;
+  color: var(--gold);
+  transition: transform 0.5s var(--ease);
+}
+.business-list li:hover::after { transform: translateX(6px); }
+.business-visual { aspect-ratio: 4/5; overflow: hidden; border-radius: 4px; position: relative; box-shadow: 0 30px 70px rgba(62, 44, 35, 0.18); }
+.business-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 2s var(--ease-slow); }
+.business-visual:hover img { transform: scale(1.04); }
+.business-visual-frame {
+  position: absolute;
+  inset: 20px;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 100px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M10 40 Q20 25 35 30 Q45 15 60 25 Q75 15 85 30 Q100 25 110 40' fill='none' stroke='%23C9A961' stroke-width='1' opacity='0.15'/%3E%3C/svg%3E");
+  opacity: 0.6;
+}
+.footer .container-wide { position: relative; z-index: 1; }
+.footer-hero {
+  text-align: center;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+  margin-bottom: 60px;
+}
+.footer-cn {
+  font-family: var(--font-calligraphy);
+  font-size: clamp(3rem, 7vw, 5rem);
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: 0.2em;
+}
+.footer-en {
+  font-family: var(--font-serif-cn);
+  font-size: 0.85rem;
+  letter-spacing: 0.5em;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.footer-tagline {
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(245, 239, 230, 0.55);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+.footer-brand p {
+  font-size: 0.82rem;
+  color: rgba(245, 239, 230, 0.6);
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+.footer-brand .footer-slogan {
+  font-family: var(--font-calligraphy);
+  color: var(--gold-light);
+  letter-spacing: 0.15em;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+.footer-col h5 {
+  font-family: var(--font-serif-cn);
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  letter-spacing: 0.3em;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.footer-col a, .footer-col p {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(245, 239, 230, 0.6);
+  margin-bottom: 10px;
+  transition: var(--ease);
+}
+.footer-col a:hover { color: var(--gold-light); padding-left: 4px; }
+.footer-bottom {
+  border-top: 1px solid rgba(201, 169, 97, 0.3);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--font-serif-cn);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: rgba(245, 239, 230, 0.5);
+}
+.footer-seal {
+  position: absolute;
+  bottom: 40px;
+  right: 72px;
+  width: 80px; height: 80px;
+  background: var(--red);
+  color: var(--cream);
+  font-family: var(--font-calligraphy);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 12px 30px rgba(139, 30, 45, 0.4);
+}
+
+/* ============================================================
+   LANGUAGE
+   ============================================================ */
+body.lang-en .intro-title, body.lang-en .intro-text, body.lang-en .intro-pillar-cn,
+body.lang-en .intro-pillar-en, body.lang-en .product-cn, body.lang-en .product-en,
+body.lang-en .product-desc, body.lang-en .product-category-tag, body.lang-en .product-discover,
+body.lang-en .archive-head-title, body.lang-en .archive-head-desc, body.lang-en .archive-cn,
+body.lang-en .archive-en, body.lang-en .category-cn, body.lang-en .category-en,
+body.lang-en .story-head-title, body.lang-en .story-info-cn, body.lang-en .story-info-en,
+body.lang-en .botanical-cn, body.lang-en .heritage-head-title, body.lang-en .heritage-head-desc,
+body.lang-en .timeline-cn, body.lang-en .timeline-en, body.lang-en .panel-cn,
+body.lang-en .panel-en, body.lang-en .panel-desc, body.lang-en .find-head-title,
+body.lang-en .find-word, body.lang-en .craft-head-title, body.lang-en .craft-step-cn,
+body.lang-en .craft-step-en, body.lang-en .culture-head-title, body.lang-en .culture-item-cn,
+body.lang-en .culture-item-en, body.lang-en .culture-item-desc, body.lang-en .business-title,
+body.lang-en .business-desc, body.lang-en .business-list li, body.lang-en .footer-cn,
+body.lang-en .footer-en, body.lang-en .footer-tagline, body.lang-en .footer-col h5,
+body.lang-en .footer-col a, body.lang-en .footer-col p, body.lang-en .products-head-title,
+body.lang-en .products-head-desc, body.lang-en .product-filter {
+  font-family: var(--font-serif-en);
+  letter-spacing: 0.05em;
+}
+body.lang-en .hero-vertical {
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  font-family: var(--font-serif-en);
+  height: auto;
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE FRIENDLY
+   ============================================================ */
+@media (max-width: 1200px) {
+  .container-wide { padding: 0 40px; }
+  .header-inner { padding: 0 40px; }
+  .hero-content { grid-template-columns: 1fr; gap: 60px; padding: 130px 40px 80px; }
+  .hero-vertical { height: auto; writing-mode: horizontal-tb; text-orientation: mixed; font-size: clamp(3rem, 9vw, 5rem); }
+  .hero-right { max-width: 500px; margin: 0 auto; }
+  .intro .container-wide { grid-template-columns: 1fr; gap: 50px; }
+  .intro-content { padding-left: 0; }
+  .intro-bg-cn { font-size: 24rem; left: -100px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); padding: 0 40px; }
+  .panels-grid { grid-template-columns: repeat(2, 1fr); height: auto; }
+  .panel { min-height: 400px; border-right: none; border-bottom: 1px solid var(--gold); }
+  .craft-sequence { grid-template-columns: repeat(3, 1fr); height: auto; }
+  .craft-step { min-height: 300px; border-right: none; border-bottom: 1px solid var(--gold); }
+  .culture-grid { grid-template-columns: 1fr; gap: 60px; }
+  .business-grid { grid-template-columns: 1fr; gap: 60px; }
+  .heritage-head { grid-template-columns: 1fr; gap: 40px; }
+  .heritage-timeline { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .heritage-timeline::before { display: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .container-wide { padding: 0 20px; }
+  .header { padding: 14px 0; }
+  .header-inner { padding: 0 20px; gap: 12px; }
+  .logo-mark { width: 42px; height: 42px; font-size: 1.3rem; }
+  .logo-cn { font-size: 1.05rem; }
+  .logo-en { font-size: 0.48rem; }
+  .nav {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 85%; height: 100vh;
+    background: var(--cream);
+    flex-direction: column;
+    padding: 110px 40px;
+    gap: 30px;
+    transition: right 0.6s var(--ease);
+    z-index: 999;
+    border-left: 2px solid var(--gold);
+    align-items: flex-start;
+    box-shadow: -20px 0 40px rgba(62, 44, 35, 0.2);
+  }
+  .nav.open { right: 0; }
+  .nav a { color: var(--red) !important; font-size: 1rem; }
+  .menu-toggle { display: flex; z-index: 1001; }
+  .header-tools .tool-link:not(.lang-toggle) { display: none; }
+  .lang-toggle { padding: 6px 14px; font-size: 0.6rem; }
+
+  .hero-content { padding: 110px 20px 70px; gap: 40px; }
+  .hero-badge-top { font-size: 0.7rem; padding: 8px 18px; letter-spacing: 0.2em; }
+  .hero-vertical { font-size: clamp(2.2rem, 11vw, 3.5rem); margin-bottom: 24px; }
+  .hero-en-title { font-size: 1.2rem; }
+  .hero-quote { font-size: 0.88rem; padding-left: 16px; margin-bottom: 32px; }
+  .hero-cta { padding: 14px 28px; font-size: 0.8rem; }
+  .hero-art { max-width: 340px; }
+  .hero-art-seal { width: 68px; height: 68px; font-size: 1rem; bottom: 24px; right: 24px; }
+  .hero-scroll { left: 20px; font-size: 0.7rem; }
+
+  .intro { padding: 100px 0; }
+  .intro-title { font-size: 2rem; }
+  .intro-text { font-size: 0.92rem; }
+  .intro-pillars { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
+  .intro-pillar-cn { font-size: 1.8rem; }
+
+  .products { padding: 100px 0; }
+  .products-head { margin-bottom: 50px; }
+  .products-head-title { font-size: 1.8rem; }
+  .products-head-desc { font-size: 0.88rem; }
+  .product-filters { gap: 8px; margin-bottom: 40px; padding: 0 20px; }
+  .product-filter { padding: 10px 20px; font-size: 0.78rem; letter-spacing: 0.1em; }
+  .product-grid { grid-template-columns: 1fr; padding: 0 20px; gap: 24px; }
+  .product-image { max-height: 420px; }
+  .product-content { padding: 22px; }
+  .product-cn { font-size: 1.2rem; }
+  .product-desc { font-size: 0.85rem; }
+
+  .heritage { padding: 100px 0; }
+  .heritage-head-title { font-size: 2rem; }
+  .heritage-timeline { grid-template-columns: 1fr; gap: 40px; }
+  .timeline-node { display: flex; align-items: center; gap: 24px; text-align: left; }
+  .timeline-dot { margin: 0; flex-shrink: 0; width: 60px; height: 60px; font-size: 0.9rem; }
+  .timeline-year { font-size: 1.3rem; }
+
+  .panels { padding: 100px 0; }
+  .panels-grid { grid-template-columns: 1fr; }
+  .panel { min-height: 380px; }
+  .panel-cn { font-size: 1.5rem; }
+
+  .find { padding: 100px 0; }
+  .find-head { margin-bottom: 60px; }
+  .find-head-title { font-size: 2.2rem; }
+  .find-words { gap: 26px; }
+  .find-word { font-size: 2rem; }
+
+  .craft { padding: 100px 0; }
+  .craft-sequence { grid-template-columns: 1fr 1fr; }
+  .craft-step { min-height: 220px; }
+
+  .culture { padding: 100px 0; }
+  .culture-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .culture-head-title { font-size: 2rem; }
+  .culture-grid { gap: 50px; }
+  .culture-item-num { font-size: 2.6rem; }
+
+  .business { padding: 100px 0; }
+  .business-grid { gap: 40px; }
+  .business-title { font-size: 1.8rem; }
+
+  .footer { padding: 80px 0 30px; }
+  .footer-cn { font-size: 3rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-seal { width: 60px; height: 60px; bottom: 24px; right: 24px; font-size: 1rem; }
+
+  /* Language overlay mobile */
+  .lang-overlay-logo { width: 72px; height: 72px; font-size: 2rem; }
+  .lang-options { grid-template-columns: 1fr; gap: 14px; }
+  .lang-option { padding: 26px 18px; }
+  .lang-option-cn { font-size: 1.5rem; }
+  .lang-overlay-question { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-content { padding: 100px 16px 60px; }
+  .hero-vertical { font-size: clamp(2rem, 12vw, 3rem); }
+  .hero-en-title .uppercase { font-size: 0.6rem; letter-spacing: 0.35em; }
+  .product-grid { padding: 0 16px; }
+  .product-image { max-height: 360px; }
+  .product-filters { padding: 0 16px; }
+  .product-filter { padding: 8px 16px; font-size: 0.72rem; }
+}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.4s var(--ease), transform 1.4s var(--ease);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ============ LANGUAGE SELECTOR OVERLAY ============ -->
+<div class="lang-overlay" id="langOverlay">
+  <div class="lang-overlay-inner">
+    <div class="lang-overlay-logo">海</div>
+    <div class="lang-overlay-title">海棠香国</div>
+    <div class="lang-overlay-subtitle">HAI TANG XIANG GUO</div>
+    <div class="lang-overlay-question">请选择您的语言 · Please select your language</div>
+    <div class="lang-options">
+      <button class="lang-option" data-lang="zh">
+        <span class="lang-option-cn">中文</span>
+        <span class="lang-option-en">Chinese</span>
+      </button>
+      <button class="lang-option" data-lang="en">
+        <span class="lang-option-cn">English</span>
+        <span class="lang-option-en">英文</span>
+      </button>
+    </div>
+    <div class="lang-overlay-footer">Since 1858 · Chongqing · China</div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header transparent" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">海</div>
+      <div class="logo-text">
+        <span class="logo-cn">海棠香国</span>
+        <span class="logo-en">HAI TANG XIANG GUO</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" data-zh="首页" data-en="Home"></a>
+      <a href="#heritage" data-zh="传承" data-en="Heritage"></a>
+      <a href="#products" data-zh="香品" data-en="Products"></a>
+      <a href="#culture" data-zh="文化" data-en="Culture"></a>
+      <a href="#story" data-zh="故事" data-en="Our Story"></a>
+      <a href="#contact" data-zh="联系" data-en="Contact"></a>
+    </nav>
+    <div class="header-tools">
+      <a href="#" class="tool-link" data-zh="搜索" data-en="Search"></a>
+      <a href="#" class="tool-link" data-zh="账户" data-en="Account"></a>
+      <a href="#" class="tool-link" data-zh="购物袋" data-en="Bag"></a>
+      <button class="lang-toggle" id="langBtn">中文 / EN</button>
+      <button class="menu-toggle" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge-top" data-zh="重庆市非物质文化遗产" data-en="Chongqing Intangible Cultural Heritage">重庆市非物质文化遗产</div>
+      <h1 class="hero-vertical" data-zh="海棠香国" data-en="The Art of Medicinal Fragrance">海棠香国</h1>
+      <div class="hero-en-title">
+        <span>HAI TANG XIANG GUO</span>
+        <span class="uppercase">The Art of Medicinal Fragrance</span>
+      </div>
+      <p class="hero-quote" data-zh="天下海棠无香，唯独昌州海棠有香。二百载非遗传承，以药制香，以香养人。" data-en="All begonias are scentless — only Changzhou's begonia carries fragrance. Two centuries of heritage."></p>
+      <a href="#products" class="hero-cta">
+        <span data-zh="探索香品" data-en="Explore Products">探索香品</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-art">
+        <div class="hero-art-frame">
+          <img class="hero-art-img" src="images/p1.jpg" alt="Chinese incense ritual" onerror="this.src='https://images.unsplash.com/photo-1611073611462-8b8e9b3a5e0f?w=1200&q=85'" />
+        </div>
+        <div class="hero-art-seal" data-zh="非遗传世" data-en="Heritage">非遗传世</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-zh="向下滚动" data-en="Scroll"></span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro" id="story">
+  <div class="container-wide">
+    <div class="intro-bg-cn">香</div>
+    <div class="intro-content reveal">
+      <span class="intro-label" data-zh="品牌哲学" data-en="Our Philosophy">品牌哲学</span>
+      <h2 class="intro-title">
+        <span data-zh="香的语言" data-en="The Language of Fragrance">香的语言</span>
+        <span class="en-line">The Language of Fragrance</span>
+      </h2>
+      <p class="intro-text" data-zh="在中医药理论的指导下，通过传统制作技艺，所得集预防疾病、养疗保健和调理身心的芳香型中药。它既是一类中药制品，也是一种中医外治疗法 — 香疗。二百年非遗传承，以药制香，以香养人，以人成道。" data-en="Guided by Traditional Chinese Medicine theory and traditional craftsmanship, we create aromatic medicines for prevention, wellness and harmony of body and mind. Two centuries of heritage."></p>
+      <div class="intro-pillars">
+        <div class="intro-pillar">
+          <div class="intro-pillar-cn">中医</div>
+          <div class="intro-pillar-en">Traditional Chinese Medicine</div>
+        </div>
+        <div class="intro-pillar">
+          <div class="intro-pillar-cn">非遗</div>
+          <div class="intro-pillar-en">Heritage Craft</div>
+        </div>
+        <div class="intro-pillar">
+          <div class="intro-pillar-cn">香</div>
+          <div class="intro-pillar-en">Fragrance Culture</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS — STYLISH FULL IMAGE GRID ============ -->
+<section class="products" id="products">
+  <div class="container-wide">
+    <div class="products-head reveal">
+      <div class="products-head-label" data-zh="香品档案" data-en="Fragrance Archive">香品档案</div>
+      <h2 class="products-head-title">
+        <span data-zh="臻品系列" data-en="The Collection">臻品系列</span>
+        <span class="en">The Collection</span>
+      </h2>
+      <p class="products-head-desc" data-zh="每一款香，都是一味药，一段时光，一种心境。从线香到香珠，从香牌到香膏，从香灸到香片——非遗技艺下的三十余款臻品。" data-en="Each fragrance is a medicine, a moment, a state of mind. From incense sticks to beads, pendants to balms, moxa to tea."></p>
+    </div>
+
+    <div class="product-filters reveal">
+      <button class="product-filter active" data-zh="全部" data-en="All">全部</button>
+      <button class="product-filter" data-zh="药香" data-en="Incense">药香</button>
+      <button class="product-filter" data-zh="佩戴" data-en="Wearable">佩戴</button>
+      <button class="product-filter" data-zh="养生" data-en="Wellness">养生</button>
+      <button class="product-filter" data-zh="香片" data-en="Tea">香片</button>
+      <button class="product-filter" data-zh="香礼" data-en="Gifts">香礼</button>
+    </div>
+
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p1.jpg" alt="禅乐香" onerror="this.src='https://images.unsplash.com/photo-1602928321679-560bb453f190?w=800&q=85'" />
+          <div class="product-seal">禅</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="药香 · 线香" data-en="Incense · Stick">药香 · 线香</div>
+          <h3 class="product-cn" data-zh="禅乐香" data-en="Chan Le Xiang">禅乐香</h3>
+          <div class="product-en">Chan Le Xiang</div>
+          <p class="product-desc" data-zh="为静默时刻而生的香。檀香与柏子的沉静基调，佐以薄荷的清凉。" data-en="Fragrance for moments of stillness. A calm base of sandalwood and cypress with mint."></p>
+          <div class="product-footer">
+            <span data-zh="木质 · 草本" data-en="Woody · Herbal">木质 · 草本</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p2.jpg" alt="安神香" onerror="this.src='https://images.unsplash.com/photo-1611073611755-8b0c5b3f8c8f?w=800&q=85'" />
+          <div class="product-seal">安</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="药香 · 线香" data-en="Incense · Stick">药香 · 线香</div>
+          <h3 class="product-cn" data-zh="安神香" data-en="An Shen Xiang">安神香</h3>
+          <div class="product-en">An Shen Xiang</div>
+          <p class="product-desc" data-zh="养心安神，沉稳内敛，缓解焦虑，行气通窍。阴沉金丝楠木、茯神、合欢花配伍。" data-en="Nourishes the heart, calms the spirit, soothes anxiety. Dark gold-thread nanmu, fushen and albizia flower."></p>
+          <div class="product-footer">
+            <span data-zh="木质 · 花香" data-en="Woody · Floral">木质 · 花香</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p3.jpg" alt="护肝香" onerror="this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&q=85'" />
+          <div class="product-seal">肝</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="药香 · 线香" data-en="Incense · Stick">药香 · 线香</div>
+          <h3 class="product-cn" data-zh="护肝香" data-en="Hu Gan Xiang">护肝香</h3>
+          <div class="product-en">Liver-Protecting Incense</div>
+          <p class="product-desc" data-zh="疏肝理气、调和气血，安抚情绪，活血通络。依春令升发之性。" data-en="Soothes liver Qi, harmonizes blood, calms emotions. Following the rising nature of spring."></p>
+          <div class="product-footer">
+            <span data-zh="木质 · 花香" data-en="Woody · Floral">木质 · 花香</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p4.jpg" alt="五行药香珠" onerror="this.src='https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=800&q=85'" />
+          <div class="product-seal">五</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="佩戴 · 香珠" data-en="Wearable · Beads">佩戴 · 香珠</div>
+          <h3 class="product-cn" data-zh="五行药香珠" data-en="Five Elements Beads">五行药香珠</h3>
+          <div class="product-en">Five Elements Fragrance Beads</div>
+          <p class="product-desc" data-zh="春日佩绿木助肝气升，夏日佩红火清热解郁，长夏佩黄土健脾和胃。" data-en="Green wood in spring lifts the liver; red fire in summer clears heat; yellow earth in late summer strengthens the spleen."></p>
+          <div class="product-footer">
+            <span data-zh="草本 · 树脂" data-en="Herbal · Resinous">草本 · 树脂</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p5.jpg" alt="朱砂香牌" onerror="this.src='https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=85'" />
+          <div class="product-seal">朱</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="佩戴 · 香牌" data-en="Wearable · Pendant">佩戴 · 香牌</div>
+          <h3 class="product-cn" data-zh="朱砂香牌" data-en="Cinnabar Pendant">朱砂香牌</h3>
+          <div class="product-en">Cinnabar Fragrance Pendant</div>
+          <p class="product-desc" data-zh="清心安神，养心益肾，辟邪防疫。朱砂、奇楠、沉香、老山檀配伍。" data-en="Clears the heart, calms the spirit, wards off evil. Cinnabar, kyara, agarwood and sandalwood."></p>
+          <div class="product-footer">
+            <span data-zh="树脂 · 木质" data-en="Resinous · Woody">树脂 · 木质</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p6.jpg" alt="二十四味药香灸" onerror="this.src='https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=85'" />
+          <div class="product-seal">灸</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="养生 · 香灸" data-en="Wellness · Moxa">养生 · 香灸</div>
+          <h3 class="product-cn" data-zh="二十四味药香灸" data-en="24-Herb Moxa">二十四味药香灸</h3>
+          <div class="product-en">24-Herb Medicinal Moxibustion</div>
+          <p class="product-desc" data-zh="舒肝胆，沁心脾，馨肺肾，通经络，透关窍，展筋骨。" data-en="Soothes liver and gallbladder, opens the heart and spleen, warms the lungs and kidneys, opens meridians."></p>
+          <div class="product-footer">
+            <span data-zh="草本 · 木质" data-en="Herbal · Woody">草本 · 木质</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 7 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p7.jpg" alt="玫瑰养颜茶" onerror="this.src='https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=800&q=85'" />
+          <div class="product-seal">茶</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="香片 · 茶饮" data-en="Tea · Fragrant">香片 · 茶饮</div>
+          <h3 class="product-cn" data-zh="玫瑰养颜茶" data-en="Rose Beauty Tea">玫瑰养颜茶</h3>
+          <div class="product-en">Rose Beauty Tea</div>
+          <p class="product-desc" data-zh="美容养颜，气质芬芳。玫瑰花、永川秀芽等香药配伍。" data-en="Beautifies, fragrant elegance. Rose and Yongchuan Xiuyai green tea."></p>
+          <div class="product-footer">
+            <span data-zh="花香 · 清新" data-en="Floral · Fresh">花香 · 清新</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 8 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p8.jpg" alt="鼻炎灵香" onerror="this.src='https://images.unsplash.com/photo-1611073611462-8b8e9b3a5e0f?w=800&q=85'" />
+          <div class="product-seal">鼻</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="药香 · 线香" data-en="Incense · Stick">药香 · 线香</div>
+          <h3 class="product-cn" data-zh="鼻炎灵香" data-en="Rhinitis Relief">鼻炎灵香</h3>
+          <div class="product-en">Rhinitis Relief Incense</div>
+          <p class="product-desc" data-zh="疏风通鼻、温而不燥、护正祛邪、清润鼻咽。沉香、细辛、辛夷配伍。" data-en="Opens the nose, gentle warmth, soothes nasal passages. Agarwood, asarum and magnolia flower."></p>
+          <div class="product-footer">
+            <span data-zh="木质 · 草本" data-en="Woody · Herbal">木质 · 草本</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 9 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p9.jpg" alt="龙涎香" onerror="this.src='https://images.unsplash.com/photo-1602928321679-560bb453f190?w=800&q=85'" />
+          <div class="product-seal">龙</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="药香 · 线香" data-en="Incense · Stick">药香 · 线香</div>
+          <h3 class="product-cn" data-zh="龙涎香" data-en="Ambergris Incense">龙涎香</h3>
+          <div class="product-en">Ambergris Incense</div>
+          <p class="product-desc" data-zh="富贵天然、内敛气质。龙涎与永川桢楠等香药和合而成。" data-en="Noble, natural, refined character. Ambergris blended with Yongchuan Zhennan."></p>
+          <div class="product-footer">
+            <span data-zh="树脂 · 木质" data-en="Resinous · Woody">树脂 · 木质</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 10 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p10.jpg" alt="玫瑰七子药香灸" onerror="this.src='https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=85'" />
+          <div class="product-seal">玫</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="养生 · 香灸" data-en="Wellness · Moxa">养生 · 香灸</div>
+          <h3 class="product-cn" data-zh="玫瑰七子药香灸" data-en="Rose Seven-White Moxa">玫瑰七子药香灸</h3>
+          <div class="product-en">Rose Seven-White Moxa</div>
+          <p class="product-desc" data-zh="面色红润、皮肤紧致，耳目精明，祛斑美白。宫廷七子白配方。" data-en="Brightens complexion, firms skin, sharpens senses. Imperial Seven-White formula."></p>
+          <div class="product-footer">
+            <span data-zh="花香 · 草本" data-en="Floral · Herbal">花香 · 草本</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 11 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p11.jpg" alt="中药香囊" onerror="this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&q=85'" />
+          <div class="product-seal">囊</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="佩戴 · 香囊" data-en="Wearable · Sachet">佩戴 · 香囊</div>
+          <h3 class="product-cn" data-zh="中药香囊" data-en="Herbal Sachet">中药香囊</h3>
+          <div class="product-en">Herbal Sachet</div>
+          <p class="product-desc" data-zh="清心安神，养心益肾，辟邪防疫。玫瑰花、荷花、桂花、腊梅花配伍。" data-en="Clears the heart, nourishes kidneys, wards off evil. Rose, lotus, osmanthus and wintersweet."></p>
+          <div class="product-footer">
+            <span data-zh="花香 · 草本" data-en="Floral · Herbal">花香 · 草本</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 12 -->
+      <article class="product-card reveal">
+        <div class="product-image-wrap">
+          <img class="product-image" src="images/p12.jpg" alt="国画大师陈子庄四季香" onerror="this.src='https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=85'" />
+          <div class="product-seal">礼</div>
+        </div>
+        <div class="product-content">
+          <div class="product-category-tag" data-zh="香礼 · 礼盒" data-en="Gift · Set">香礼 · 礼盒</div>
+          <h3 class="product-cn" data-zh="陈子庄四季香礼" data-en="Chen Zizhuang Four Seasons">陈子庄四季香礼</h3>
+          <div class="product-en">Chen Zizhuang Four Seasons Gift</div>
+          <p class="product-desc" data-zh="疏肝解郁，健脾祛湿，润肺养气，补肾固精。四时养生香礼。" data-en="Soothes liver, strengthens spleen, nourishes lungs, tonifies kidneys. Four-season wellness gift."></p>
+          <div class="product-footer">
+            <span data-zh="四时 · 养生" data-en="Four Seasons · Wellness">四时 · 养生</span>
+            <span class="product-discover"><span data-zh="探索" data-en="Discover">探索</span><span class="arrow">→</span></span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERITAGE ============ -->
+<section class="heritage" id="heritage">
+  <div class="container-wide">
+    <div class="heritage-head reveal">
+      <div>
+        <div class="heritage-head-label">Heritage · 非遗传承</div>
+        <h2 class="heritage-head-title" data-zh="香的传承" data-en="The Heritage of Fragrance">香的传承</h2>
+      </div>
+      <p class="heritage-head-desc" data-zh="崇门中医源自海棠香国川渝周氏一脉，从1858年至今，已有七代。永川中医药香传统制作技艺入选重庆市市级非物质文化遗产。" data-en="Chongmen TCM descends from the Zhou lineage of Changzhou. For seven generations since 1858. Yongchuan Traditional Medicinal Fragrance Craft is a Chongqing Municipal Intangible Cultural Heritage."></p>
+    </div>
+    <div class="heritage-timeline">
+      <div class="timeline-node reveal">
+        <div class="timeline-dot">I</div>
+        <div class="timeline-year">1858</div>
+        <div class="timeline-cn" data-zh="崇门中医" data-en="Chongmen TCM">崇门中医</div>
+        <div class="timeline-en">Origin</div>
+      </div>
+      <div class="timeline-node reveal">
+        <div class="timeline-dot">II</div>
+        <div class="timeline-year">清</div>
+        <div class="timeline-cn" data-zh="周万发" data-en="Zhou Wanfa">周万发</div>
+        <div class="timeline-en">Xiang Shier</div>
+      </div>
+      <div class="timeline-node reveal">
+        <div class="timeline-dot">III</div>
+        <div class="timeline-year">民国</div>
+        <div class="timeline-cn" data-zh="何宗怀" data-en="He Zonghuai">何宗怀</div>
+        <div class="timeline-en">3rd Gen</div>
+      </div>
+      <div class="timeline-node reveal">
+        <div class="timeline-dot">IV</div>
+        <div class="timeline-year">当代</div>
+        <div class="timeline-cn" data-zh="张益丽" data-en="Zhang Yili">张益丽</div>
+        <div class="timeline-en">5th Gen</div>
+      </div>
+      <div class="timeline-node reveal">
+        <div class="timeline-dot">V</div>
+        <div class="timeline-year">2025</div>
+        <div class="timeline-cn" data-zh="海棠香国" data-en="Haitang Xiangguo">海棠香国</div>
+        <div class="timeline-en">Today</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANELS ============ -->
+<section class="panels">
+  <div class="container-wide">
+    <div class="panels-head reveal">
+      <div class="panels-head-label">Four Heritage Collections</div>
+      <h2 class="panels-head-title" data-zh="四大非遗系列" data-en="Four Heritage Collections">四大非遗系列</h2>
+    </div>
+    <div class="panels-grid reveal">
+      <div class="panel">
+        <img class="panel-img" src="images/p1.jpg" alt="Handcrafted" onerror="this.src='https://images.unsplash.com/photo-1602928321679-560bb453f190?w=1000&q=85'" />
+        <div class="panel-overlay">
+          <div class="panel-num">01</div>
+          <div class="panel-content">
+            <div class="panel-cn" data-zh="手工药香" data-en="Handcrafted">手工药香</div>
+            <div class="panel-en">Handcrafted Medicinal Fragrance</div>
+            <p class="panel-desc" data-zh="香十二手工药香非遗制作技艺，十二道工序，古法和合。" data-en="The Xiang Shier handmade medicinal incense craft — twelve stages, ancient methods."></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <img class="panel-img" src="images/p2.jpg" alt="Ancient Application" onerror="this.src='https://images.unsplash.com/photo-1611073611755-8b0c5b3f8c8f?w=1000&q=85'" />
+        <div class="panel-overlay">
+          <div class="panel-num">02</div>
+          <div class="panel-content">
+            <div class="panel-cn" data-zh="古法涂香" data-en="Ancient Fragrance">古法涂香</div>
+            <div class="panel-en">Ancient Fragrance Application</div>
+            <p class="panel-desc" data-zh="香膏、面霜、面膜等古法护肤，宫廷七子白传承。" data-en="Balms, creams and masks crafted by ancient methods."></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <img class="panel-img" src="images/p3.jpg" alt="Yongchuan TCM" onerror="this.src='https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1000&q=85'" />
+        <div class="panel-overlay">
+          <div class="panel-num">03</div>
+          <div class="panel-content">
+            <div class="panel-cn" data-zh="永川中医药香" data-en="Yongchuan TCM">永川中医药香</div>
+            <div class="panel-en">Traditional Medicinal Fragrance Craft</div>
+            <p class="panel-desc" data-zh="二十四味、三十三味药香灸，内病外治，温灸透入。" data-en="24-herb and 33-herb moxibustion — external treatment warming through to the interior."></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <img class="panel-img" src="images/p4.jpg" alt="Yongchuan Tea" onerror="this.src='https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=1000&q=85'" />
+        <div class="panel-overlay">
+          <div class="panel-num">04</div>
+          <div class="panel-content">
+            <div class="panel-cn" data-zh="永川香片" data-en="Yongchuan Tea">永川香片</div>
+            <div class="panel-en">Yongchuan Fragrant Tea</div>
+            <p class="panel-desc" data-zh="以烘青绿茶为坯，窨制栀子、玉兰、茉莉、玫瑰，七道工序。" data-en="Roasted green tea scented with gardenia, magnolia, jasmine and rose through seven stages."></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIND ============ -->
+<section class="find">
+  <div class="container-wide">
+    <div class="find-head reveal">
+      <div class="find-head-label">Find Your Fragrance</div>
+      <h2 class="find-head-title">
+        <span data-zh="寻找你的香" data-en="Find Your Fragrance">寻找你的香</span>
+        <span class="en">What does your day need?</span>
+      </h2>
+    </div>
+    <div class="find-words reveal">
+      <div class="find-word" data-zh="静心" data-en="Calm">静心<span class="en">Calm</span></div>
+      <div class="find-word" data-zh="专注" data-en="Focus">专注<span class="en">Focus</span></div>
+      <div class="find-word" data-zh="安眠" data-en="Sleep">安眠<span class="en">Sleep</span></div>
+      <div class="find-word" data-zh="仪式" data-en="Ritual">仪式<span class="en">Ritual</span></div>
+      <div class="find-word" data-zh="调和" data-en="Balance">调和<span class="en">Balance</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CRAFT ============ -->
+<section class="craft">
+  <div class="container-wide">
+    <div class="craft-head reveal">
+      <div class="craft-head-label">The Hand of the Artisan</div>
+      <h2 class="craft-head-title">
+        <span data-zh="匠人之手" data-en="The Hand of the Artisan">匠人之手</span>
+        <span class="en">From Herb to Fragrance</span>
+      </h2>
+    </div>
+    <div class="craft-sequence reveal">
+      <div class="craft-step">
+        <img class="craft-step-img" src="images/p1.jpg" alt="Botanicals" onerror="this.src='https://images.unsplash.com/photo-1602928321679-560bb453f190?w=600&q=85'" />
+        <div class="craft-step-overlay">
+          <div class="craft-step-num">I</div>
+          <div class="craft-step-cn" data-zh="本草" data-en="Botanicals">本草</div>
+          <div class="craft-step-en">Sourcing</div>
+        </div>
+      </div>
+      <div class="craft-step">
+        <img class="craft-step-img" src="images/p2.jpg" alt="Preparation" onerror="this.src='https://images.unsplash.com/photo-1611073611755-8b0c5b3f8c8f?w=600&q=85'" />
+        <div class="craft-step-overlay">
+          <div class="craft-step-num">II</div>
+          <div class="craft-step-cn" data-zh="炮制" data-en="Preparation">炮制</div>
+          <div class="craft-step-en">Processing</div>
+        </div>
+      </div>
+      <div class="craft-step">
+        <img class="craft-step-img" src="images/p3.jpg" alt="Formulation" onerror="this.src='https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=85'" />
+        <div class="craft-step-overlay">
+          <div class="craft-step-num">III</div>
+          <div class="craft-step-cn" data-zh="配伍" data-en="Formulation">配伍</div>
+          <div class="craft-step-en">Formula</div>
+        </div>
+      </div>
+      <div class="craft-step">
+        <img class="craft-step-img" src="images/p4.jpg" alt="Handcraft" onerror="this.src='https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&q=85'" />
+        <div class="craft-step-overlay">
+          <div class="craft-step-num">IV</div>
+          <div class="craft-step-cn" data-zh="手作" data-en="Handcraft">手作</div>
+          <div class="craft-step-en">Shaping</div>
+        </div>
+      </div>
+      <div class="craft-step">
+        <img class="craft-step-img" src="images/p5.jpg" alt="Resting" onerror="this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=85'" />
+        <div class="craft-step-overlay">
+          <div class="craft-step-num">V</div>
+          <div class="craft-step-cn" data-zh="静养" data-en="Resting">静养</div>
+          <div class="craft-step-en">Maturing</div>
+        </div>
+      </div>
+      <div class="craft-step">
+        <img class="craft-step-img" src="images/p6.jpg" alt="Fragrance" onerror="this.src='https://images.unsplash.com/photo-1611073611462-8b8e9b3a5e0f?w=600&q=85'" />
+        <div class="craft-step-overlay">
+          <div class="craft-step-num">VI</div>
+          <div class="craft-step-cn" data-zh="成香" data-en="Fragrance">成香</div>
+          <div class="craft-step-en">Complete</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CULTURE ============ -->
+<section class="culture" id="culture">
+  <div class="container-wide">
+    <div class="culture-head reveal">
+      <h2 class="culture-head-title">
+        <span data-zh="香 · 文化" data-en="Fragrance · Culture">香 · 文化</span>
+        <span class="en">Fragrance · Culture</span>
+      </h2>
+      <div class="culture-head-meta">Three Stories</div>
+    </div>
+    <div class="culture-grid">
+      <div class="culture-item reveal">
+        <div class="culture-item-num">01</div>
+        <div class="culture-item-img"><img src="images/p7.jpg" alt="Fragrance Culture" onerror="this.src='https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=85'" /></div>
+        <div class="culture-item-cn" data-zh="香道文化" data-en="Fragrance Culture">香道文化</div>
+        <div class="culture-item-en">The Way of Incense</div>
+        <p class="culture-item-desc" data-zh="品鉴香道、围炉煮茶，在静谧自然中感受传统香文化。徇齐书院，隐于山野的特色中医书院。" data-en="Appreciate incense, brew tea by the fire, feel traditional fragrance culture in serene nature."></p>
+        <a href="#" class="culture-item-link"><span data-zh="阅读" data-en="Read">阅读</span><span class="arrow">→</span></a>
+      </div>
+      <div class="culture-item reveal">
+        <div class="culture-item-num">02</div>
+        <div class="culture-item-img"><img src="images/p8.jpg" alt="TCM Tradition" onerror="this.src='https://images.unsplash.com/photo-1611073765534-9e7b4e0b4b4c?w=800&q=85'" /></div>
+        <div class="culture-item-cn" data-zh="中医传统" data-en="TCM Tradition">中医传统</div>
+        <div class="culture-item-en">Chinese Medicine</div>
+        <p class="culture-item-desc" data-zh="中医文化的继承、学习、交流及弘扬。川渝作为中国道教的发源地，道医传承影响深远。" data-en="Inheritance, learning, exchange and promotion of Chinese medicine culture."></p>
+        <a href="#" class="culture-item-link"><span data-zh="阅读" data-en="Read">阅读</span><span class="arrow">→</span></a>
+      </div>
+      <div class="culture-item reveal">
+        <div class="culture-item-num">03</div>
+        <div class="culture-item-img"><img src="images/p9.jpg" alt="Heritage Craft" onerror="this.src='https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&q=85'" /></div>
+        <div class="culture-item-cn" data-zh="非遗技艺" data-en="Heritage Craft">非遗技艺</div>
+        <div class="culture-item-en">Heritage Techniques</div>
+        <p class="culture-item-desc" data-zh="手作线香、香牌、香珠、香囊、香捶、古法口红等体验。药香非遗的传授、研习、展示及推广。" data-en="Hands-on experience with incense, pendants, beads, sachets, hammers and ancient lipstick."></p>
+        <a href="#" class="culture-item-link"><span data-zh="阅读" data-en="Read">阅读</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS ============ -->
+<section class="business" id="contact">
+  <div class="container-wide">
+    <div class="business-grid">
+      <div class="business-content reveal">
+        <div class="business-label">Partnership</div>
+        <h2 class="business-title">
+          <span data-zh="将传统带入现代世界" data-en="Bring Tradition to the Modern World">将传统带入现代世界</span>
+          <span class="en">Bring Tradition to the Modern World</span>
+        </h2>
+        <p class="business-desc" data-zh="我们诚邀全球的经销商、零售商、文化机构、批发买家及品牌合作伙伴，共同推广中国药香文化。" data-en="We invite distributors, retailers, cultural institutions, wholesale buyers and brand partners worldwide to promote the culture of Chinese medicinal fragrance together."></p>
+        <ul class="business-list">
+          <li data-zh="批发采购" data-en="Wholesale">批发采购</li>
+          <li data-zh="经销合作" data-en="Distribution">经销合作</li>
+          <li data-zh="文化合作" data-en="Cultural Partnership">文化合作</li>
+          <li data-zh="商务合作" data-en="Business Cooperation">商务合作</li>
+        </ul>
+      </div>
+      <div class="business-visual reveal">
+        <img src="images/p10.jpg" alt="Business" onerror="this.src='https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=1000&q=85'" />
+        <div class="business-visual-frame"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container-wide">
+    <div class="footer-hero">
+      <div class="footer-cn">海棠香国</div>
+      <div class="footer-en">HAI TANG XIANG GUO</div>
+      <div class="footer-tagline" data-zh="传统中药芬芳 · 非遗传承 · 自 1858 年" data-en="Traditional Chinese Medicinal Fragrance · Heritage Craft · Since 1858">Traditional Chinese Medicinal Fragrance · Since 1858</div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p data-zh="重庆桢楠中药研究所有限公司" data-en="Chongqing Zhennan TCM Research Institute Co., Ltd.">重庆桢楠中药研究所有限公司</p>
+        <p data-zh="道地药材 · 非遗技艺 · 香文化" data-en="Authentic Herbs · Heritage Craft · Fragrance Culture">道地药材 · 非遗技艺 · 香文化</p>
+        <p class="footer-slogan" data-zh="修合无人见 · 存心有天知" data-en="Though no one sees the crafting, Heaven knows the intention.">修合无人见 · 存心有天知</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-zh="探索" data-en="Explore">探索</h5>
+        <a href="#home" data-zh="首页" data-en="Home">首页</a>
+        <a href="#heritage" data-zh="传承" data-en="Heritage">传承</a>
+        <a href="#products" data-zh="香品" data-en="Products">香品</a>
+        <a href="#culture" data-zh="文化" data-en="Culture">文化</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-zh="文化" data-en="Culture">文化</h5>
+        <a href="#culture" data-zh="香文化" data-en="Fragrance Culture">香文化</a>
+        <a href="#culture" data-zh="中医传统" data-en="TCM Tradition">中医传统</a>
+        <a href="#culture" data-zh="非遗技艺" data-en="Heritage Craft">非遗技艺</a>
+        <a href="#story" data-zh="品牌故事" data-en="Our Story">品牌故事</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-zh="商务" data-en="Business">商务</h5>
+        <a href="#contact" data-zh="批发采购" data-en="Wholesale">批发采购</a>
+        <a href="#contact" data-zh="经销合作" data-en="Distribution">经销合作</a>
+        <a href="#contact" data-zh="文化合作" data-en="Cultural Partnership">文化合作</a>
+        <a href="#contact" data-zh="商务合作" data-en="Business Cooperation">商务合作</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-zh="联系" data-en="Contact">联系</h5>
+        <p>13522754501</p>
+        <p>374926656@qq.com</p>
+        <p data-zh="重庆市永川区" data-en="Yongchuan District, Chongqing">重庆市永川区</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 海棠香国 · 重庆桢楠中药研究所有限公司</div>
+      <div>渝ICP备xxxxxxxx号</div>
+    </div>
+  </div>
+  <div class="footer-seal">海棠</div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  const body = document.body;
+  const langBtn = document.getElementById('langBtn');
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  const header = document.getElementById('header');
+  const langOverlay = document.getElementById('langOverlay');
+
+  // ============ LANGUAGE FUNCTIONS ============
+  function setLanguage(lang) {
+    if (lang === 'en') { body.classList.add('lang-en'); document.documentElement.lang = 'en'; }
+    else { body.classList.remove('lang-en'); document.documentElement.lang = 'zh-CN'; }
+    document.querySelectorAll('[data-zh][data-en]').forEach((el) => {
+      const zh = el.getAttribute('data-zh');
+      const en = el.getAttribute('data-en');
+      if (el.querySelector('span')) {
+        const firstText = el.childNodes[0];
+        if (firstText && firstText.nodeType === 3) firstText.nodeValue = lang === 'en' ? en : zh;
+        else el.textContent = lang === 'en' ? en : zh;
+      } else el.textContent = lang === 'en' ? en : zh;
+    });
+    localStorage.setItem('hxg-lang', lang);
+  }
+
+  // ============ LANGUAGE SELECTOR OVERLAY ============
+  const savedLang = localStorage.getItem('hxg-lang');
+  if (savedLang) {
+    // Already chosen before — hide overlay and set language
+    setLanguage(savedLang);
+    langOverlay.classList.add('hidden');
+    setTimeout(() => { langOverlay.style.display = 'none'; }, 800);
+  } else {
+    // First visit — show overlay, don't set language yet (wait for user choice)
+    // Prevent scrolling while overlay is showing
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.querySelectorAll('.lang-option').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      setLanguage(lang);
+      langOverlay.classList.add('hidden');
+      document.body.style.overflow = '';
+      setTimeout(() => { langOverlay.style.display = 'none'; }, 800);
+    });
+  });
+
+  // Header language toggle
+  langBtn.addEventListener('click', () => {
+    setLanguage(body.classList.contains('lang-en') ? 'zh' : 'en');
+  });
+
+  // ============ MOBILE MENU ============
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    menuBtn.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => { nav.classList.remove('open'); menuBtn.classList.remove('open'); });
+  });
+
+  // ============ HEADER SCROLL ============
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 80) {
+      header.classList.add('solid'); header.classList.remove('transparent');
+    } else {
+      header.classList.remove('solid'); header.classList.add('transparent');
+    }
+  });
+
+  // ============ SMOOTH SCROLL ============
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href === '') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ============ PRODUCT FILTERS ============
+  document.querySelectorAll('.product-filter').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.product-filter').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Filter is visual only for now — all products shown
+    });
+  });
+
+  // ============ SCROLL REVEAL ============
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -80px 0px' });
+  revealElements.forEach((el) => revealObserver.observe(el));
+
+  console.log('%c海棠香国 HAI TANG XIANG GUO%c\nTraditional Chinese Medicinal Fragrance',
+    'font-size: 22px; color: #8B1E2D; font-weight: 500;',
+    'font-size: 12px; color: #C9A961;');
+})();
+</script>
+</body>
+</html>
